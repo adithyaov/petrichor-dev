@@ -1,0 +1,31 @@
+{
+  "name": "petrichor-dev",
+  "version": "1.0.0",
+  "description": "A dev env for petrichor",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "client": "webpack-dev-server --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adithyaov/petrichor-dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adithyaov/petrichor-dev/issues"
+  },
+  "homepage": "https://github.com/adithyaov/petrichor-dev#readme",
+  "dependencies": {
+    "ace-css": "^1.1.0",
+    "css-loader": "^0.28.8",
+    "elm-webpack-loader": "^4.4.0",
+    "file-loader": "^1.1.6",
+    "font-awesome": "^4.7.0",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}
