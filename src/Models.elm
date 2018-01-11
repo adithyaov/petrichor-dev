@@ -1,12 +1,14 @@
 module Models exposing (..)
 
+import Http
+
 type alias Model =
     { route : Route
     }
 
 initModel : Model
 initModel =
-    { route = HomeRoute
+    { route = LoadingRoute
     }
 
 type alias EventCard =
@@ -37,15 +39,14 @@ type alias TimelineElement =
     }
 
 type Route
-    = HomeRoute
-    | EventRoute (List EventCard)
-    | WSRoute (List EventCard)
-    | ScheduleRoute (Timeline)
-    | DisplayEvent (Event)
-    | AboutRoute
+    = LoadingRoute
+    | EventRoute (Result (Http.Error) (List EventCard))
+    | WSRoute (Result (Http.Error) (List EventCard))
+    | TimelineRoute (Result (Http.Error) (Timeline))
+    | DisplayEvent (Result (Http.Error) (Event))
 
 type Resource
-    = EventsReource
+    = EventsResource
     | WSResource
     | EventResource String
     | TimelineResource
